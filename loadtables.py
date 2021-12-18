@@ -1,11 +1,12 @@
 import csv
 import numpy as np
+from pathlib import Path
 
 # Loads and returns tables A2 and A3, combines them and creates a overall header and table
 def getTablesSaturatedWater():
     # Read tables and load into variables
-    file_A2 = open('tables\\A-2.csv')
-    file_A3 = open('tables\\A-3.csv')
+    file_A2 = open(Path('tables/A-2.csv'))
+    file_A3 = open(Path('tables/A-3.csv'))
 
     csvreader_A2 = csv.reader(file_A2)
     csvreader_A3 = csv.reader(file_A3)
@@ -47,7 +48,7 @@ def getTablesSaturatedWater():
 
 def getTablesSuperheatedVapour():
     # Read tables and load into variables
-    file_A4 = open('tables\\A-4.csv')
+    file_A4 = open(Path('tables/A-4.csv'))
 
     csvreader = csv.reader(file_A4)
 
